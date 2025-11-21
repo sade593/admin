@@ -1,28 +1,37 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ka">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <title>Water Admin</title>
 
-    <style>
-      html, body, #app {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        overflow: hidden;
-        background-color: #f9fafb; /* Tailwind's gray-50 */
-      }
-    </style>
+    <!-- ✅ Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ✅ Tailwind Config (custom colors/fonts) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb',
+              light: '#f9fafb',
+            },
+            fontFamily: {
+              sans: ['FiraGO', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- ✅ Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body class="h-screen w-screen overflow-hidden">
-    <div id="app" class="h-full w-full"></div>
+  <body class="bg-light font-sans">
+    <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

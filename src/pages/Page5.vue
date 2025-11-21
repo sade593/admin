@@ -1,0 +1,2 @@
+<template><h1>Page 5</h1></template>
+<script setup></script>
