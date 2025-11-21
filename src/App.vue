@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <AdminHeader />
-    <AdminNavbar />
 
     <main class="content-wrapper py-8">
       <RouterView />
@@ -12,7 +11,6 @@
 <script setup>
 import { RouterView } from "vue-router";
 import AdminHeader from "./components/AdminHeader.vue";
-import AdminNavbar from "./components/AdminNavbar.vue";
 </script>
 
 <style>

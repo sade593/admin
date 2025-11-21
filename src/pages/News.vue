@@ -1,11 +1,9 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <!-- Header + Navbar -->
-    <AdminHeader />
-    <AdminNavbar />
+  <div class="w-full px-6 py-10">
+    
 
     <!-- Content -->
-    <main class="max-w-7xl mx-auto px-6 py-10">
+    <main class="w-full px-6 py-10">
       <!-- Title + Actions -->
       <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold text-gray-800">სიახლეები</h1>
@@ -143,7 +141,7 @@
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import AdminHeader from "../components/AdminHeader.vue";
-import AdminNavbar from "../components/AdminNavbar.vue";
+
 
 const router = useRouter();
 

@@ -12,7 +12,7 @@
         </button>
       </div>
 
-      <!-- ✅ Clickable Cards -->
+      
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <RouterLink
           v-for="page in pages"
@@ -38,15 +38,15 @@
 
 <script setup>
 import AdminHeader from "../components/AdminHeader.vue";
-import AdminNavbar from "../components/AdminNavbar.vue";
+
 
 const pages = [
   { id: 1, title: "მთავარი მენიუ", icon: "fas fa-bars", route: "/main-menu" },
   { id: 2, title: "სიახლეები", icon: "fas fa-newspaper", route: "/news" },
-  { id: 3, title: "სერვის ცენტრები", icon: "fas fa-building", route: "/centers" },
-  { id: 4, title: "ტარიფები", icon: "fas fa-coins", route: "/tariffs" },
-  { id: 5, title: "შეჯამება", icon: "fas fa-chart-pie", route: "/summary" },
-  { id: 6, title: "განაცხადები", icon: "fas fa-file-alt", route: "/applications" },
-  { id: 7, title: "პარამეტრები", icon: "fas fa-cog", route: "/settings" },
+  { id: 3, title: "სერვის ცენტრები", icon: "fas fa-building", route: "/Centers" },
+  { id: 4, title: "ტარიფები", icon: "fas fa-coins", route: "/translations" },
+  { id: 5, title: "შეჯამება", icon: "fas fa-chart-pie", route: "/Interruptions" },
+  { id: 6, title: "განაცხადები", icon: "fas fa-file-alt", route: "/announcements" },
+  { id: 7, title: "პარამეტრები", icon: "fas fa-cog", route: "/parameters" },
 ];
 </script>

@@ -16,51 +16,18 @@
           </span>
         </div>
       </RouterLink>
+      <div
+      class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 text-gray-700 text-sm font-medium"
+    >
+      <RouterLink to="/">მთავარი</RouterLink>
 
-      <!-- 🔹 Right: User Info -->
-      <div class="relative" @click="toggleDropdown">
-        <div class="flex items-center space-x-3 cursor-pointer select-none">
-          <div
-            class="bg-blue-100 text-blue-700 font-bold rounded-full w-9 h-9 flex items-center justify-center text-sm"
-          >
-            ს
-          </div>
-          <span class="text-gray-700 font-medium text-sm">
-            სანდრო ადეიშვილი
-          </span>
-          <i
-            :class="[
-              'fas text-gray-500 text-xs transition-transform duration-200',
-              dropdownOpen ? 'fa-chevron-up' : 'fa-chevron-down'
-            ]"
-          ></i>
-        </div>
+      <a href="#" class="hover:text-blue-600">პროექტები</a>
+      <a href="#" class="hover:text-blue-600">მომხმარებლები</a>
+      <a href="#" class="hover:text-blue-600">კონტაქტი</a>
+    </div>
 
-        <!-- 🔽 Dropdown Menu -->
-        <div
-          v-if="dropdownOpen"
-          class="absolute right-0 mt-3 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50"
-        >
-          <RouterLink
-            to="/settings"
-            class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition"
-          >
-            <i class="fas fa-user-cog mr-2 text-gray-500"></i> პროფილი / პარამეტრები
-          </RouterLink>
-          <RouterLink
-            to="/applications"
-            class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition"
-          >
-            <i class="fas fa-file-alt mr-2 text-gray-500"></i> ჩემი განაცხადები
-          </RouterLink>
-          <button
-            @click="logout"
-            class="w-full text-left px-4 py-2 text-red-600 hover:bg-gray-50 transition"
-          >
-            <i class="fas fa-sign-out-alt mr-2"></i> გამოსვლა
-          </button>
-        </div>
-      </div>
+      
+     
     </div>
   </header>
 </template>

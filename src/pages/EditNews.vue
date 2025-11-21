@@ -3,7 +3,7 @@
    
 
     
-    <main class="max-w-7xl mx-auto px-6 py-10">
+    <main class="w-full px-6 py-10">
       <div
         class="bg-white border border-gray-100 rounded-2xl shadow-sm p-8 space-y-8"
       >
@@ -111,8 +111,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import AdminHeader from "../components/AdminHeader.vue";
-import AdminNavbar from "../components/AdminNavbar.vue";
 
 const router = useRouter();
 const route = useRoute();
