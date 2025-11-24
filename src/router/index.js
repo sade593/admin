@@ -5,9 +5,9 @@ import MainMenu from "../pages/MainMenu.vue";
 import News from "../pages/News.vue";
 import EditNews from "../pages/EditNews.vue";
 import Centers from "../pages/Centers.vue";
-import Translations from "../pages/Translations.vue";
 import Interruptions from "../pages/Interruptions.vue";
-import Announcements from "../pages/Announcements.vue";
+import Announcements from "../pages/announcments.vue";
+import EditAnnouncements from "../pages/editannouncments.vue";
 import Parameters from "../pages/parameters.vue";
 
 const routes = [
@@ -48,21 +48,24 @@ const routes = [
     name: "Centers",
     component: Centers,
   },
-  {
-    path: "/translations",
-    name: "Translations",
-    component: Translations,
-  },
+ 
   {
     path: "/interruptions",
     name: "Interruptions",
     component: Interruptions,
   },
-  {
-    path: "/announcements",
-    name: "Announcements",
-    component: Announcements,
-  },
+ {
+  path: "/announcements",
+  name: "Announcements",
+  component: Announcements,
+},
+{
+  path: "/announcements/edit/:id",
+  name: "EditAnnouncements",
+  component: EditAnnouncements,
+  props: true,
+},
+
   {
     path: "/parameters",
     name: "Parameters",

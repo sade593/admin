@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white shadow-sm sticky top-0 z-50 border-b">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-      <!-- 🔹 Left: Logo + Company Title (clickable) -->
+      
       <RouterLink
         to="/"
         class="flex items-center space-x-3 hover:opacity-80 transition"
@@ -16,18 +16,15 @@
           </span>
         </div>
       </RouterLink>
-      <div
-      class="max-w-7xl mx-auto flex space-x-6 px-6 py-3 text-gray-700 text-sm font-medium"
-    >
-      <RouterLink to="/">მთავარი</RouterLink>
 
-      <a href="#" class="hover:text-blue-600">პროექტები</a>
-      <a href="#" class="hover:text-blue-600">მომხმარებლები</a>
-      <a href="#" class="hover:text-blue-600">კონტაქტი</a>
-    </div>
+      <nav class="flex space-x-6 text-gray-700 text-sm font-medium">
+        <RouterLink to="/main-menu" class="nav-link">მთავარი მენიუ</RouterLink>
+        <RouterLink to="/news" class="nav-link">სიახლეები</RouterLink>
+        <RouterLink to="/announcements" class="nav-link">განცხადებები</RouterLink>
+        <RouterLink to="/centers" class="nav-link">სერვის ცენტრები</RouterLink>
+        <RouterLink to="/parameters" class="nav-link">პარამეტრები</RouterLink>
+      </nav>
 
-      
-     
     </div>
   </header>
 </template>
@@ -36,14 +33,15 @@
 import { ref } from "vue";
 
 const dropdownOpen = ref(false);
-
-const toggleDropdown = () => {
-  dropdownOpen.value = !dropdownOpen.value;
-};
-
-// Placeholder logout function
+const toggleDropdown = () => (dropdownOpen.value = !dropdownOpen.value);
 const logout = () => {
   alert("გამოსვლა წარმატებით შესრულდა");
   dropdownOpen.value = false;
 };
 </script>
+
+<style scoped>
+.nav-link {
+  @apply text-sm font-medium text-gray-700 hover:text-blue-600 transition;
+}
+</style>
