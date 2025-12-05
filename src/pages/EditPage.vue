@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen bg-gray-50 py-10 px-8">
 
-    <div class="max-w-[1600px] mx-auto bg-white border border-gray-200 shadow-sm rounded-2xl p-10 space-y-10">
+    <div class="w-5/5 mx-auto bg-white border border-gray-200 shadow-sm rounded-2xl p-10 space-y-10">
       <h1 class="text-3xl font-bold text-gray-800">გვერდის რედაქტირება</h1>
 
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 gap-8">
 
         <!-- GEORGIAN CARD -->
         <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-6">
@@ -18,8 +18,15 @@
 
           <div>
             <label class="block mb-1 text-gray-700 font-medium">ტექსტი (GE)</label>
-            <textarea v-model="form.body_ge" rows="12"
-              class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+
+            <QuillEditor
+                content-type="html"
+                theme="snow"
+                toolbar="full"
+                :content-style="{ height: '300px', fontSize: '16px' }"
+                :style="{ height: '300px' }"
+            />
+
           </div>
         </div>
 
@@ -35,8 +42,13 @@
 
           <div>
             <label class="block mb-1 text-gray-700 font-medium">Content (EN)</label>
-            <textarea v-model="form.body_en" rows="12"
-              class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+            <QuillEditor
+                content-type="html"
+                theme="snow"
+                toolbar="full"
+                :content-style="{ height: '300px', fontSize: '16px' }"
+                :style="{ height: '300px' }"
+            />
           </div>
         </div>
 
@@ -57,6 +69,8 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
 
 const router = useRouter();
 const route = useRoute();

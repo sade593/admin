@@ -42,11 +42,11 @@
 
         <div>
           <label class="block text-sm font-medium text-gray-700">Title (EN)</label>
-          <input
-            v-model="form.title_en"
-            type="text"
-            class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-600"
-          />
+<!--          <input-->
+<!--            v-model="form.title_en"-->
+<!--            type="text"-->
+<!--            class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-600"-->
+<!--          />-->
         </div>
 
         <div>
