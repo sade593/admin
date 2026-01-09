@@ -38,7 +38,7 @@
               <td class="px-6 py-3 text-gray-700">{{ page.id }}</td>
 
               <td class="px-6 py-3 font-medium text-blue-600">
-                <RouterLink :to="page.route" class="hover:text-blue-800 transition">
+                <RouterLink :to="pageLink(page)" class="hover:text-blue-800 transition">
                   {{ page.title }}
                 </RouterLink>
               </td>
@@ -192,6 +192,9 @@ const pages = ref([
   { id: 68, title: "გეგმიური და არაგეგმიური სამუშაოები - არქივი", route: "/main-menu" },
   
 ]);
+
+const pageLink = (page) =>
+  page.title === "სიახლეები" ? "/news" : `/pages/edit/${page.id}`;
 
 
 
