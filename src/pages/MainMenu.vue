@@ -256,3 +256,4 @@ const goToPage = (page) => {
 
 const deletePage = (id) => alert(`Delete page #${id}`);
 </script>
+  

@@ -162,6 +162,6 @@ const deleteItem = (id) => (items.value = items.value.filter((i) => i.id !== id)
 
 <style scoped>
 * {
-  font-family: 'FiraGO', sans-serif;
+  font-family: 'DejaVu Sans', sans-serif;
 }
 </style>
