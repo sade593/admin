@@ -23,6 +23,8 @@
               კამპანიის მიმოხილვა
             </button>
           </div>
+
+          
         </div>
 
         <div class="mt-8 grid gap-4 sm:grid-cols-2">
