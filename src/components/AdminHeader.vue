@@ -40,7 +40,9 @@
               <span class="inline-flex rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-white">
                 {{ userName }}
               </span>
-              <span class="block text-xs text-black/60">{{ userPosition }}</span>
+              <span class="inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                {{ userPosition }}
+              </span>
             </span>
             <i class="fa-solid fa-chevron-down hidden text-xs text-slate-400 sm:block"></i>
           </button>
@@ -94,7 +96,7 @@ const route = useRoute();
 
 const userName = "სანდრო ადეიშვილი";
 const userInitials = "SA";
-const userPosition = "ადმინისტრატორი";
+const userPosition = "პროგრამისტი";
 
 const navLinks = [
   { to: "/main-menu", label: "მთავარი მენიუ" },

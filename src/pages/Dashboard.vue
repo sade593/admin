@@ -1,72 +1,5 @@
 <template>
   <div class="space-y-10">
-    <section class="grid gap-6 lg:grid-cols-[2fr,1fr]">
-      <div class="rounded-3xl border border-blue-100/80 bg-white p-8 shadow-sm">
-        <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-wide text-black">Water.gov.ge</p>
-            <p class="mt-2 text-sm text-black/60">
-              სწრაფად მართეთ კონტენტი, მონიტორინგი და მარკეტინგის კამპანიები ერთ სივრცეში.
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <button
-              class="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-secondary/90"
-            >
-              <i class="fa-solid fa-plus"></i>
-              ახალი გვერდი
-            </button>
-            <button
-              class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-semibold text-black shadow-sm transition hover:border-blue-200"
-            >
-              <i class="fa-solid fa-clipboard-check"></i>
-              კამპანიის მიმოხილვა
-            </button>
-          </div>
-
-          
-        </div>
-
-        <div class="mt-8 grid gap-4 sm:grid-cols-2">
-          <div
-            v-for="stat in stats"
-            :key="stat.label"
-            class="flex items-center gap-4 rounded-2xl border border-blue-100/60 bg-blue-50/40 px-5 py-4"
-          >
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-sm">
-              <i :class="stat.icon" class="text-lg"></i>
-            </div>
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-wide text-black/60">{{ stat.label }}</p>
-              <p class="text-lg font-semibold text-black">{{ stat.value }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-4 rounded-3xl border border-blue-100/80 bg-white p-6 shadow-sm">
-        <h2 class="text-sm font-semibold uppercase tracking-wide text-black/60">დღის ამოცანები</h2>
-        <div class="space-y-4">
-          <div
-            v-for="task in tasks"
-            :key="task.title"
-            class="rounded-2xl border border-blue-100/60 bg-white px-4 py-3"
-          >
-            <p class="text-sm font-semibold text-black">{{ task.title }}</p>
-            <p class="text-xs text-black/60">{{ task.caption }}</p>
-            <div class="mt-3 flex items-center gap-2">
-              <span class="h-2 w-2 rounded-full" :class="task.dot"></span>
-              <span class="text-xs text-black/60">{{ task.status }}</span>
-            </div>
-          </div>
-        </div>
-        <button class="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-secondary bg-secondary/10 px-4 py-2 text-sm font-semibold text-black">
-          <i class="fa-solid fa-calendar"></i>
-          სრული გეგმა
-        </button>
-      </div>
-    </section>
-
     <section>
       <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
@@ -82,6 +15,7 @@
           </button>
         </div>
       </div>
+    </section>
 
       <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         <router-link
@@ -111,34 +45,6 @@
 </template>
 
 <script setup>
-const stats = [
-  { label: "აქტიური გვერდები", value: "12", icon: "fa-solid fa-layer-group" },
-  { label: "დაგეგმილი სიახლეები", value: "5", icon: "fa-solid fa-calendar-check" },
-  { label: "ბოლო განახლება", value: "დღეს 14:30", icon: "fa-solid fa-clock" },
-  { label: "გამოქვეყნებული განცხადებები", value: "8", icon: "fa-solid fa-bullhorn" },
-];
-
-const tasks = [
-  {
-    title: "მთავარი ბანერის განახლება",
-    caption: "გაზაფხულის კამპანიის ვიზუალები.",
-    status: "პრიორიტეტი: მაღალი",
-    dot: "bg-rose-400",
-  },
-  {
-    title: "სერვის ცენტრების რუკა",
-    caption: "ახალი ლოკაციების დამატება.",
-    status: "პრიორიტეტი: საშუალო",
-    dot: "bg-amber-400",
-  },
-  {
-    title: "კრიზისული შეტყობინებები",
-    caption: "სოციალური არხების სინქრონიზაცია.",
-    status: "მზადდება",
-    dot: "bg-emerald-400",
-  },
-];
-
 const pages = [
   {
     id: 1,
