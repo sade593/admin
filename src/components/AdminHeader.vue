@@ -6,24 +6,20 @@
         <router-link to="/" class="flex items-center gap-3">
           <div class="flex items-center justify-center">
             <img src="/wlogo.png" alt="Water.gov.ge logo" class="h-12 w-auto object-contain shrink-0">
-
-
-
           </div>
-          
         </router-link>
       </div>
 
       <div class="flex flex-1 justify-center">
-        <nav class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/70 p-2 text-sm font-medium text-black/70 shadow-sm md:flex">
+        <nav class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/70 p-2 text-sm font-medium md:flex">
           <router-link
             v-for="link in navLinks"
             :key="link.to"
             :to="link.to"
-            class="rounded-full px-4 py-2 transition"
+            class="rounded-full px-4 py-2 transition-colors duration-200"
             :class="isActive(link.to)
-              ? 'bg-secondary text-white shadow-sm'
-              : 'hover:bg-slate-100 hover:text-black'"
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'"
           >
             {{ link.label }}
           </router-link>
@@ -59,15 +55,15 @@
     </div>
 
     <div class="border-t border-slate-100/80 bg-white/80 px-4 py-3 md:hidden">
-      <nav class="flex flex-wrap gap-2 text-sm font-medium text-black/70">
+      <nav class="flex flex-wrap gap-2 text-sm font-medium">
         <router-link
           v-for="link in navLinks"
           :key="link.to"
           :to="link.to"
-          class="rounded-full px-3 py-2 transition"
+          class="rounded-full px-3 py-2 transition-colors duration-200"
           :class="isActive(link.to)
-            ? 'bg-secondary text-white shadow-sm'
-            : 'bg-slate-100 text-black/70 hover:bg-slate-200'"
+            ? 'bg-blue-600 text-white shadow-sm'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-blue-600'"
         >
           {{ link.label }}
         </router-link>

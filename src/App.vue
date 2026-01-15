@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white text-black">
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50 text-black">
     <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div class="absolute -top-24 right-0 h-72 w-72 rounded-full bg-secondary/10 blur-3xl"></div>
       <div class="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-secondary/5 blur-3xl"></div>

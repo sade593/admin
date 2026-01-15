@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-    <div class="w-full px-4 sm:px-6 lg:px-8 py-8">
+  <div class="min-h-screen w-full ">   
+    <div class="container mx-auto px-4 py-8 md:px-8 md:py-12 lg:px-12">
       <!-- Header -->
       <div class="mb-8">
         <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">
@@ -12,22 +12,22 @@
       </div>
 
       <!-- Cards Grid -->
-      <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-8 sm:gap-10 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1 -->
         <router-link
           to="/main-menu"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-blue-300"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-blue-300"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-bars text-blue-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
               ნავიგაცია
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             მთავარი მენიუ
           </h3>
           
@@ -35,7 +35,7 @@
             გამართეთ ნავიგაცია და ძირითადი სტრუქტურა.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
@@ -44,18 +44,18 @@
         <!-- Card 2 -->
         <router-link
           to="/news"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-green-300"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-green-300"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-newspaper text-green-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">
               კონტენტი
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             სიახლეები
           </h3>
           
@@ -63,7 +63,7 @@
             მართეთ პრესრელიზები და მედიაკონტენტი.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
@@ -72,18 +72,18 @@
         <!-- Card 3 -->
         <router-link
           to="/centers"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-purple-300"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-purple-300"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-building text-purple-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
               ლოკაციები
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             სერვის ცენტრები
           </h3>
           
@@ -91,7 +91,7 @@
             განაახლეთ ოფისების მისამართები და სამუშაო საათები.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
@@ -100,18 +100,18 @@
         <!-- Card 4 -->
         <router-link
           to="/interruptions"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-orange-300"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-orange-300"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-chart-pie text-orange-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
               ანალიტიკა
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             შეჯამება
           </h3>
           
@@ -119,7 +119,7 @@
             იხილეთ მოხმარების სტატისტიკა და ანალიზი.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
@@ -128,18 +128,18 @@
         <!-- Card 5 -->
         <router-link
           to="/announcements"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-pink-300"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-pink-300"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-file-alt text-pink-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-full">
               კომუნიკაცია
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             განაცხადები
           </h3>
           
@@ -147,7 +147,7 @@
             გამოაქვეყნეთ განცხადებები და შეტყობინებები.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
@@ -156,18 +156,18 @@
         <!-- Card 6 -->
         <router-link
           to="/parameters"
-          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400"
+          class="group bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400"
         >
           <div class="flex items-start justify-between mb-6">
-            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center">
+            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0">
               <i class="fas fa-cog text-slate-600 text-xl"></i>
             </div>
-            <span class="text-sm font-medium text-slate-600 bg-slate-50 px-3 py-1 rounded-full">
+            <span class="text-xs sm:text-sm font-medium text-slate-600 bg-slate-50 px-3 py-1 rounded-full">
               სისტემა
             </span>
           </div>
           
-          <h3 class="text-xl font-bold text-slate-800 mb-3">
+          <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-3">
             პარამეტრები
           </h3>
           
@@ -175,7 +175,7 @@
             აკონტროლეთ სისტემის ძირითადი პარამეტრები.
           </p>
           
-          <div class="flex items-center text-blue-600 font-medium">
+          <div class="flex items-center text-blue-600 font-medium text-sm sm:text-base">
             <span>მართვა</span>
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
