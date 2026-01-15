@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
-    <div class="px-4 py-6">
+    <div class="w-full px-4 sm:px-6 lg:px-8 py-8">
       <!-- Header -->
       <div class="mb-8">
         <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">
