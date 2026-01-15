@@ -1,69 +1,58 @@
 <template>
   <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-lg">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex h-16 w-full items-center justify-between px-8">
+
       <div class="flex items-center gap-4">
         <router-link to="/" class="flex items-center gap-3">
-          <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary/10">
-            <img src="/water-logo.jpg" alt="Water.gov.ge logo" class="h-8 w-8 object-contain">
+          <div class="flex items-center justify-center">
+            <img src="/wlogo.png" alt="Water.gov.ge logo" class="h-12 w-auto object-contain shrink-0">
+
+
+
           </div>
-          <div class="hidden sm:block">
-            <p class="text-sm font-semibold text-black">Water.gov.ge</p>
-            <p class="text-xs text-black/60">Admin Panel</p>
-          </div>
+          
         </router-link>
       </div>
 
-      <nav class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/70 p-2 text-sm font-medium text-black/70 shadow-sm md:flex">
-        <router-link
-          v-for="link in navLinks"
-          :key="link.to"
-          :to="link.to"
-          class="rounded-full px-4 py-2 transition"
-          :class="isActive(link.to)
-            ? 'bg-secondary text-white shadow-sm'
-            : 'hover:bg-slate-100 hover:text-black'"
-        >
-          {{ link.label }}
-        </router-link>
-      </nav>
+      <div class="flex flex-1 justify-center">
+        <nav class="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/70 p-2 text-sm font-medium text-black/70 shadow-sm md:flex">
+          <router-link
+            v-for="link in navLinks"
+            :key="link.to"
+            :to="link.to"
+            class="rounded-full px-4 py-2 transition"
+            :class="isActive(link.to)
+              ? 'bg-secondary text-white shadow-sm'
+              : 'hover:bg-slate-100 hover:text-black'"
+          >
+            {{ link.label }}
+          </router-link>
+        </nav>
+      </div>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center">
         <div class="relative">
           <button
             @click="profileOpen = !profileOpen"
-            class="flex items-center gap-3 rounded-full border border-slate-200 bg-white/80 px-2 py-1 shadow-sm transition hover:border-slate-300"
+            class="flex items-center gap-3 rounded-full bg-blue-600 px-4 py-2 text-white shadow-sm transition hover:bg-blue-700"
           >
-            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary to-sky-400 text-sm font-semibold text-white uppercase">
-              {{ userInitials }}
-            </span>
-            <span class="hidden text-left sm:block">
-              <span class="inline-flex rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-white">
-                {{ userName }}
-              </span>
-              <span class="inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
-                {{ userPosition }}
-              </span>
-            </span>
-            <i class="fa-solid fa-chevron-down hidden text-xs text-slate-400 sm:block"></i>
+            <span class="text-sm font-semibold">{{ userName }}</span>
+            <span class="text-xs font-semibold opacity-90">{{ userPosition }}</span>
+            <svg class="h-4 w-4 opacity-90" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.1l3.71-3.88a.75.75 0 1 1 1.08 1.04l-4.24 4.44a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+            </svg>
           </button>
 
           <div
             v-if="profileOpen"
-            class="absolute right-0 mt-3 w-64 rounded-2xl border border-slate-200 bg-white shadow-xl"
+            class="absolute right-0 mt-3 w-60 rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden"
           >
-            <div class="p-4">
-              <p class="text-sm font-semibold text-black">{{ userName }}</p>
-              <p class="text-xs text-black/60">{{ userPosition }}</p>
-            </div>
-            <div class="border-t border-slate-100">
-              <button
-                @click="onSignOut"
-                class="flex w-full items-center gap-2 px-4 py-3 text-left text-sm text-black/70 transition hover:bg-slate-50 hover:text-black"
-              >
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                გამოსვლა
-              </button>
-            </div>
+            <button
+              @click="onSignOut"
+              class="w-full px-4 py-3 text-left text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              სისტემიდან გამოსვლა
+            </button>
           </div>
         </div>
       </div>
@@ -95,7 +84,6 @@ const profileOpen = ref(false);
 const route = useRoute();
 
 const userName = "სანდრო ადეიშვილი";
-const userInitials = "SA";
 const userPosition = "პროგრამისტი";
 
 const navLinks = [
@@ -109,7 +97,7 @@ const navLinks = [
 const isActive = (path) => route.path === path;
 
 const onSignOut = () => {
-  alert("გამოსვლა წარმატებით შესრულდა");
+  alert("სისტემიდან გამოსვლა შესრულდა");
   profileOpen.value = false;
 };
 </script>

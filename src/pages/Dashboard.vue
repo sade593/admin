@@ -1,50 +1,230 @@
 <template>
-  <div class="space-y-10">
-    <section>
-      <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
-        <div>
-          <h2 class="text-xl font-semibold text-black">სექციები და შინაარსი</h2>
-          <p class="text-sm text-black/60">შედით თითოეულ განყოფილებაში და განაახლეთ ინფორმაცია.</p>
-        </div>
-        <div class="flex items-center gap-3">
-          <button class="rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-semibold text-black/70 hover:border-blue-200">
-            ფილტრები
-          </button>
-          <button class="rounded-full border border-secondary bg-secondary/10 px-4 py-2 text-sm font-semibold text-black shadow-sm">
-            ახალი განყოფილება
-          </button>
-        </div>
+  <div class="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+    <div class="px-4 py-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-2">
+          water.gov.ge
+        </h1>
+        <p class="text-slate-600">
+          აირჩიეთ განყოფილება ინფორმაციის განსახლებლად
+        </p>
       </div>
-    </section>
 
-      <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <!-- Cards Grid -->
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Card 1 -->
         <router-link
-          v-for="page in pages"
-          :key="page.id"
-          :to="page.route"
-          class="group rounded-3xl border border-blue-100/80 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-secondary/40 hover:shadow-lg"
+          to="/main-menu"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-blue-300"
         >
-          <div class="flex items-start justify-between">
-            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/10 text-blue-600">
-              <i :class="page.icon" class="text-lg"></i>
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-bars text-blue-600 text-xl"></i>
             </div>
-            <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-black/70">
-              {{ page.tag }}
+            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+              ნავიგაცია
             </span>
           </div>
-          <h3 class="mt-4 text-lg font-semibold text-black">{{ page.title }}</h3>
-          <p class="mt-2 text-sm text-black/60">{{ page.description }}</p>
-          <div class="mt-6 flex items-center justify-between text-sm font-semibold text-black">
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            მთავარი მენიუ
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            გამართეთ ნავიგაცია და ძირითადი სტრუქტურა.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
             <span>მართვა</span>
-            <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
+          </div>
+        </router-link>
+
+        <!-- Card 2 -->
+        <router-link
+          to="/news"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-green-300"
+        >
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-newspaper text-green-600 text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-green-600 bg-green-50 px-3 py-1 rounded-full">
+              კონტენტი
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            სიახლეები
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            მართეთ პრესრელიზები და მედიაკონტენტი.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
+            <span>მართვა</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
+          </div>
+        </router-link>
+
+        <!-- Card 3 -->
+        <router-link
+          to="/centers"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-purple-300"
+        >
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-building text-purple-600 text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
+              ლოკაციები
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            სერვის ცენტრები
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            განაახლეთ ოფისების მისამართები და სამუშაო საათები.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
+            <span>მართვა</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
+          </div>
+        </router-link>
+
+        <!-- Card 4 -->
+        <router-link
+          to="/interruptions"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-orange-300"
+        >
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-chart-pie text-orange-600 text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+              ანალიტიკა
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            შეჯამება
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            იხილეთ მოხმარების სტატისტიკა და ანალიზი.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
+            <span>მართვა</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
+          </div>
+        </router-link>
+
+        <!-- Card 5 -->
+        <router-link
+          to="/announcements"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-pink-300"
+        >
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-pink-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-file-alt text-pink-600 text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-pink-600 bg-pink-50 px-3 py-1 rounded-full">
+              კომუნიკაცია
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            განაცხადები
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            გამოაქვეყნეთ განცხადებები და შეტყობინებები.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
+            <span>მართვა</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
+          </div>
+        </router-link>
+
+        <!-- Card 6 -->
+        <router-link
+          to="/parameters"
+          class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-400"
+        >
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center">
+              <i class="fas fa-cog text-slate-600 text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-slate-600 bg-slate-50 px-3 py-1 rounded-full">
+              სისტემა
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold text-slate-800 mb-3">
+            პარამეტრები
+          </h3>
+          
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            აკონტროლეთ სისტემის ძირითადი პარამეტრები.
+          </p>
+          
+          <div class="flex items-center text-blue-600 font-medium">
+            <span>მართვა</span>
+            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-2 transition-transform duration-300"></i>
           </div>
         </router-link>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script setup>
+const stats = [
+  {
+    label: "სულ მომხმარებელი",
+    value: "12,458",
+    change: "+12.5%",
+    trending: "up",
+    icon: "fas fa-users",
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-600"
+  },
+  {
+    label: "აქტიური განცხადებები",
+    value: "248",
+    change: "+8.2%",
+    trending: "up",
+    icon: "fas fa-file-alt",
+    bgColor: "bg-green-50",
+    iconColor: "text-green-600"
+  },
+  {
+    label: "სერვის ცენტრები",
+    value: "34",
+    change: "+2",
+    trending: "up",
+    icon: "fas fa-building",
+    bgColor: "bg-purple-50",
+    iconColor: "text-purple-600"
+  },
+  {
+    label: "ბოლო განახლება",
+    value: "2 სთ",
+    change: "რეალურ დროში",
+    trending: "up",
+    icon: "fas fa-clock",
+    bgColor: "bg-orange-50",
+    iconColor: "text-orange-600"
+  }
+];
+
 const pages = [
   {
     id: 1,
@@ -53,6 +233,9 @@ const pages = [
     route: "/main-menu",
     description: "გამართეთ ნავიგაცია და ძირითადი სტრუქტურა.",
     tag: "ნავიგაცია",
+    bgColor: "bg-blue-100",
+    iconColor: "text-blue-600",
+    tagColor: "bg-blue-50 text-blue-700 group-hover:bg-blue-100"
   },
   {
     id: 2,
@@ -61,6 +244,9 @@ const pages = [
     route: "/news",
     description: "მართეთ პრესრელიზები და მედიაკონტენტი.",
     tag: "კონტენტი",
+    bgColor: "bg-green-100",
+    iconColor: "text-green-600",
+    tagColor: "bg-green-50 text-green-700 group-hover:bg-green-100"
   },
   {
     id: 3,
@@ -69,6 +255,9 @@ const pages = [
     route: "/centers",
     description: "განაახლეთ ოფისების მისამართები და სამუშაო საათები.",
     tag: "ლოკაციები",
+    bgColor: "bg-purple-100",
+    iconColor: "text-purple-600",
+    tagColor: "bg-purple-50 text-purple-700 group-hover:bg-purple-100"
   },
   {
     id: 5,
@@ -77,6 +266,9 @@ const pages = [
     route: "/interruptions",
     description: "იხილეთ მოხმარების სტატისტიკა და ანალიზი.",
     tag: "ანალიტიკა",
+    bgColor: "bg-orange-100",
+    iconColor: "text-orange-600",
+    tagColor: "bg-orange-50 text-orange-700 group-hover:bg-orange-100"
   },
   {
     id: 6,
@@ -85,6 +277,9 @@ const pages = [
     route: "/announcements",
     description: "გამოაქვეყნეთ განცხადებები და შეტყობინებები.",
     tag: "კომუნიკაცია",
+    bgColor: "bg-pink-100",
+    iconColor: "text-pink-600",
+    tagColor: "bg-pink-50 text-pink-700 group-hover:bg-pink-100"
   },
   {
     id: 7,
@@ -93,6 +288,9 @@ const pages = [
     route: "/parameters",
     description: "აკონტროლეთ სისტემის ძირითადი პარამეტრები.",
     tag: "სისტემა",
+    bgColor: "bg-gray-100",
+    iconColor: "text-gray-600",
+    tagColor: "bg-gray-50 text-gray-700 group-hover:bg-gray-100"
   },
 ];
 </script>

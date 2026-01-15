@@ -4,7 +4,6 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-      <!-- GEORGIAN CARD -->
       <div class="bg-white shadow-sm border rounded-2xl p-6 space-y-4">
         <h2 class="text-xl font-bold text-gray-800">ქართული</h2>
 
@@ -36,7 +35,8 @@
         </div>
       </div>
 
-      <!-- ENGLISH CARD -->
+
+
       <div class="bg-white shadow-sm border rounded-2xl p-6 space-y-4">
         <h2 class="text-xl font-bold text-gray-800">English</h2>
 
@@ -69,7 +69,6 @@
       </div>
     </div>
 
-    <!-- FILE + STATUS + DATE -->
     <div class="bg-white shadow-sm border rounded-2xl p-6 mt-10 space-y-4">
       <div>
         <label class="block text-sm font-medium mb-1">სტატუსი</label>
@@ -96,7 +95,6 @@
       </div>
     </div>
 
-    <!-- SUBMIT BUTTONS -->
     <div class="flex justify-end space-x-4 mt-8">
       <button @click="cancel" class="px-5 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">
         გაუქმება
